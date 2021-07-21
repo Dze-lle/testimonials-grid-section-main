@@ -30,6 +30,7 @@ body {
     margin: 0;
     color: var(--white);
     background-color: var(--light-grayish);
+    line-height: 1.3;
 }
 
 h4 {margin: 0;}
@@ -39,27 +40,107 @@ p {margin: 0;}
     padding: 4rem 1.50rem;
 }
 
+/* carta morada */
 .container__purple {
     background-color: var(--moderate-violet);
-    border-radius: 0.625rem;
-    padding: .60rem 1.50rem;
 }
 
-.container__purple .user {
+.container__purple p {
+    max-width: 237px;
+}
+
+.container__purple p:nth-child(2) {
+    padding-right: 1px;
+}
+
+/* carta gris */
+.container__grey {
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.container__grey p {
+    max-width: 270px;
+}
+
+/* carta blanca primero hijo */
+.container__white {
+    background-color: var(--white);
+    color: var(--very-dark-blacksih-blue);
+}
+
+.container__white p {
+    max-width: 250px;
+}
+
+/* carta oscura  */
+.container__black {
+    background-color: var(--very-dark-blacksih-blue);
+}
+
+.container__black p {
+    max-width: 251px;
+}
+
+.container__black .user .user__img {
+    background-color: var(--moderate-violet);
+}
+
+/* Variables Generales */
+:is(.container__purple, .container__grey, .container__white, .container__black) {
+    border-radius: 0.625rem;
+    padding-top: 28px;
+    padding-left: 32px;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+}
+
+.user {
     display: flex;
     margin-bottom: 1rem;
 }
 
-.container__purple .user .user__img img {
-    border-radius: 50px;
-    height: 30px;
+.user__img {
+    background-color: var(--white);
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
-.container__purple .user .user__info {
+img {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user__info {
+    font-size: 12px;
     margin-left: 1rem;
 }
 
-.container__purple .user .user__info .role {
+.role {
+    opacity: 0.5;
+    font-size: .65rem;
+}
+
+p {
+    letter-spacing: .05rem;
+    margin-bottom: 24px;
+}
+
+p strong {
+    font-size: 16px;
+}
+
+p small {
     opacity: 0.5;
     font-size: .65rem;
 }
