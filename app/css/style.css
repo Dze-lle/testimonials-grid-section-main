@@ -86,7 +86,12 @@ body {
 }
 
 .user {
+    font-size: 10px;
     display: flex;
+}
+
+.user .user__info .role {
+    opacity: .4;
 }
 
 .user .user__img {
@@ -110,6 +115,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.comments p small {
+    opacity: .5;
 }
 
 @media only screen and (max-width: 890px) {
