@@ -50,6 +50,17 @@ body {
 .container__purple {
     background-color: var(--moderate-violet);
     grid-column: 1 / 3;
+    position: relative;
+    z-index: 100;
+}
+
+.container__purple img {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 
 /* gray */
@@ -92,6 +103,11 @@ body {
 .user {
     font-size: .60rem;
     display: flex;
+    align-items: center;
+}
+
+.user .user__info .username {
+    margin: 0 0 .20rem 0;
 }
 
 .user .user__info .role {
@@ -119,6 +135,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 :is(.container__purple, .container__black, .container__white-lg) .comments {
@@ -139,5 +156,9 @@ body {
         display: flex;
         flex-direction: column;
         padding: 2rem 1.50rem;
+    }
+
+    .container__purple img {
+        left: 60%;
     }
 }
